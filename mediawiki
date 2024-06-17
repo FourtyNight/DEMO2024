@@ -23,7 +23,7 @@ services:
       # - ./LocalSettings.php:/var/www/html/LocalSettings.php
   # This key also defines the name of the database host used during setup instead of the default "localhost"
   database:
-    image: mariadb
+    image: mysql
     restart: always
     environment:
       # @see https://phabricator.wikimedia.org/source/mediawiki/browse/master/includes/DefaultSettings.php
