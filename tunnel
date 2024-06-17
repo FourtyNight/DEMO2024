@@ -1,0 +1,7 @@
+auto tunnel1
+iface tunnel1 inet tunnel
+address 10.10.10.1
+mode gre
+local x.x.x.x
+enpoint x.x.x.x
+ttl 255
