@@ -1,0 +1,17 @@
+nano /etc/sysconfig/dhcpd
+  DHCPDARGS=ens19
+nano /etc/dhcp/dhcpd.conf # ?
+  ddns-update-style none;
+  subnet 192.168.100.0 netmask 255.255.255.192 {
+  option routers 192.168.100.1;
+  option subnet-mask 255.255.255.192;
+  option domain-name "hq.work";
+  option domain-name-servers 1.1.1.1;
+  range dynamic-bootp 192.168.100.10 192.168.100.20;
+  default-lease-time 21600;
+  max-lease-time 43200;
+}
+host hq-srv.hq.work {
+  hardware ethernet XX:XX:XX:XX:XX:XX;
+  fixed-address 192.168.100.2;
+}
