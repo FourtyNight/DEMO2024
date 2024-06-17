@@ -2,7 +2,7 @@
 #docker-compose -f wiki.yml up -d
 #docker exec -it root-database-1 bash
 #hostname -i
-#docker container rename root-database-1 db
+#docker rename root-database-1 db
 #cp /home/user/Downloads/LocalSettings.php /root/
 # Access via "http://localhost:8080"
 #   (or "http://$(docker-machine ip):8080" if using docker-machine)
