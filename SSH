@@ -1,0 +1,9 @@
+# Правило проброса портов
+iptables -t nat -A PREROUTING -p tcp --dport 2222 -d 192.168.100.2 -j DNAT --to-destination 192.168.100.2:22
+
+# Правило запрета для доступа по порту 22 на HQ-SRV
+iptables -A FORWARD -p tcp --dport 22 -d 192.168.100.2 -m conntrack ! --ctstate DNAT -j DROP
+mkdir /etc/sysconfig/iptables/
+iptables-save > /etc/sysconfig/iptables/rule.v4
+AllowUsers *@192.168.100.0/26 *@192.168.200.0/28
+*@10.1.1.0/30 *@10.2.2.0/30
