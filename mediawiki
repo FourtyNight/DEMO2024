@@ -1,5 +1,8 @@
 # MediaWiki with MariaDB
-#
+#docker-compose -f wiki.yml up -d
+#docker exec -it root-database-1 bash
+#docker container rename root-database-1 db
+#hostname -i
 # Access via "http://localhost:8080"
 #   (or "http://$(docker-machine ip):8080" if using docker-machine)
 version: '3'
