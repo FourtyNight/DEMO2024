@@ -1,5 +1,6 @@
 nano /etc/sysconfig/dhcpd
-  DHCPDARGS=ens19
+ssh -oKexAlgorithms=+diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1 -i cisco test-user@89.169.152.132
+DHCPDARGS=ens19
 nano /etc/dhcp/dhcpd.conf # ?
   ddns-update-style none;
   subnet 192.168.100.0 netmask 255.255.255.192 {
