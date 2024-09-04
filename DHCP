@@ -16,3 +16,7 @@ host hq-srv.hq.work {
   hardware ethernet XX:XX:XX:XX:XX:XX;
   fixed-address 192.168.100.2;
 }
+
+[default]
+aws_access_key_id = YCAJExzh1r7XpsYDE2CFg0Ckd
+aws_secret_access_key = YCNi_-T9kkZyjwQTuEwtu2Q--dDiHGvczcrboHDl
